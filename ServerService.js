@@ -7,6 +7,20 @@ const url = "https://aghiljv.herokuapp.com/api/posts/";
 const blogUrl = "https://aghiljv.herokuapp.com/api/blogs/";
 
 class ServerService {
+  //Get id fur ga
+  static getId() {
+    return new Promise((resolve, reject) => {
+      try {
+        axios.get("https://aghiljv.herokuapp.com/ga_id").then(response => {
+          const data = response.data;
+          resolve(data);
+        });
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
   //Get posts
   static getPortfolios() {
     return new Promise((resolve, reject) => {
