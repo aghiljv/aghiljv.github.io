@@ -1,11 +1,11 @@
 # Group 1
-User-agent: Googlebot
-Disallow: /img/
-
-# Group 2
 User-agent: *
 Disallow: /img/
 
-#Group3
+# Group 2
+User-agent: Googlebot
+Allow: /img/
+
+#Group 3
 User-agent: *
 Disallow: /*.pdf$
