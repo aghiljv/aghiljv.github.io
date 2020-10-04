@@ -48,7 +48,6 @@ workbox.routing.registerRoute(
   new workbox.strategies.StaleWhileRevalidate({}),
   "GET"
 );
-
 workbox.routing.setCatchHandler(({ url, event, params }) => {
   const strategy = new workbox.strategies.NetworkFirst({
     networkTimeoutSeconds: 10
