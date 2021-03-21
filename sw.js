@@ -33,7 +33,7 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.routing.registerRoute(
   new RegExp("https://aghiljose.com/.*"),
   new workbox.strategies.CacheFirst({
-    cacheName: "aghil_jose_120321_01",
+    cacheName: "aghil_jose_210321_01",
     cacheExpiration: { maxEntries: 100, maxAgeSeconds: 604800 }
   }),
   "GET"
