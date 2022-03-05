@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/terms-and-conditions", {data:[{}],fetch:[],mutations:[["pageTitle\u002Fset","T & C"]]});
