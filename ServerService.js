@@ -1,17 +1,17 @@
 import axios from "axios";
 
 // const url = "http://localhost:5000/api/posts/";
-const url = "https://aghiljv.herokuapp.com/api/posts/";
+const url = "https://aghiljose.onrender.com/api/posts/";
 
 // const blogUrl = "http://localhost:5000/api/blogs/";
-const blogUrl = "https://aghiljv.herokuapp.com/api/blogs/";
+const blogUrl = "https://aghiljose.onrender.com/api/blogs/";
 
 class ServerService {
   //Get id fur ga
   static getId() {
     return new Promise((resolve, reject) => {
       try {
-        axios.get("https://aghiljv.herokuapp.com/ga_id").then(response => {
+        axios.get("https://aghiljose.onrender.com/ga_id").then((response) => {
           const data = response.data;
           resolve(data);
         });
@@ -25,11 +25,11 @@ class ServerService {
   static getPortfolios() {
     return new Promise((resolve, reject) => {
       try {
-        axios.get(url).then(response => {
+        axios.get(url).then((response) => {
           const data = response.data;
           resolve(
-            data.map(post => ({
-              ...post
+            data.map((post) => ({
+              ...post,
             }))
           );
         });
@@ -42,11 +42,11 @@ class ServerService {
   static getPortfolio(name) {
     return new Promise((resolve, reject) => {
       try {
-        axios.get(`${url}${name}`).then(response => {
+        axios.get(`${url}${name}`).then((response) => {
           const data = response.data;
           resolve(
-            data.map(post => ({
-              ...post
+            data.map((post) => ({
+              ...post,
             }))
           );
         });
@@ -60,10 +60,10 @@ class ServerService {
   static getBlogs() {
     return new Promise((resolve, reject) => {
       try {
-        axios.get(blogUrl).then(response => {
+        axios.get(blogUrl).then((response) => {
           const blogData = response.data;
-          blogData.map(blog => ({
-            ...blog
+          blogData.map((blog) => ({
+            ...blog,
           }));
           resolve(blogData.reverse());
         });
@@ -76,11 +76,11 @@ class ServerService {
   static getBlog(name) {
     return new Promise((resolve, reject) => {
       try {
-        axios.get(`${blogUrl}${name}`).then(response => {
+        axios.get(`${blogUrl}${name}`).then((response) => {
           const blogData = response.data;
           resolve(
-            blogData.map(blog => ({
-              ...blog
+            blogData.map((blog) => ({
+              ...blog,
             }))
           );
         });
@@ -96,7 +96,7 @@ class ServerService {
       email,
       name,
       comment,
-      date
+      date,
     });
   }
 
