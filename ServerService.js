@@ -1,17 +1,17 @@
 import axios from "axios";
 
 // const url = "http://localhost:5000/api/posts/";
-const url = "https://aghiljose.onrender.com/api/posts/";
+const url = "https://aghiljose.vercel.app/api/posts/";
 
 // const blogUrl = "http://localhost:5000/api/blogs/";
-const blogUrl = "https://aghiljose.onrender.com/api/blogs/";
+const blogUrl = "https://aghiljose.vercel.app/api/blogs/";
 
 class ServerService {
   //Get id fur ga
   static getId() {
     return new Promise((resolve, reject) => {
       try {
-        axios.get("https://aghiljose.onrender.com/ga_id").then((response) => {
+        axios.get("https://aghiljose.vercel.app/ga_id").then((response) => {
           const data = response.data;
           resolve(data);
         });
