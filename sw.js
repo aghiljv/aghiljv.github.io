@@ -19,7 +19,7 @@ const options = {
       handler: "CacheFirst",
       method: "GET",
       strategyOptions: {
-        cacheName: "aghil_jose_061023_1",
+        cacheName: "aghil_jose_071023",
         cacheExpiration: { maxEntries: 100, maxAgeSeconds: 604800 },
       },
       strategyPlugins: [],

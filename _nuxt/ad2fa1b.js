@@ -1370,7 +1370,7 @@
                         case 0:
                           if (
                             (e.saveCookies(
-                              "aghiljose_com_previous_loaded_domain_061023_1",
+                              "aghiljose_com_previous_loaded_domain_071023",
                               "loaded"
                             ),
                             !document.getElementById("gaPermission").checked &&
@@ -1472,7 +1472,7 @@
           },
           mounted: function () {
             "loaded" ==
-            this.$cookies.get("aghiljose_com_previous_loaded_domain_061023_1")
+            this.$cookies.get("aghiljose_com_previous_loaded_domain_071023")
               ? "loaded" ==
                 this.$cookies.get("aghiljose_com_previous_loaded_ga")
                 ? ((document.getElementById("gaPermission").checked = !0),
