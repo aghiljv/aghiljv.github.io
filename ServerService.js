@@ -77,6 +77,7 @@ class ServerService {
     return new Promise((resolve, reject) => {
       try {
         axios.get(`${blogUrl}${name}`).then((response) => {
+          console.log(`${blogUrl}${name}`);
           const blogData = response.data;
           resolve(
             blogData.map((blog) => ({
